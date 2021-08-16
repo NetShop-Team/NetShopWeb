@@ -13,9 +13,9 @@ function App(){
             <Router>
                <Header />
                 <Switch>
-                  <Route path="/" component={ProductListing}/>
-                  <Route path="/login" component={LoginLogout}/>
-                  <Route path="/product/:productId" component={ProductDetails}/>
+                  <Route path="/" exact component={ProductListing}/>
+                  <Route path="/login" exact component={LoginLogout}/>
+                  <Route path="/product/:productId" exact component={ProductDetails}/>
                   <Route>404 Not Fouuuuund</Route>
                 </Switch>
             </Router>
