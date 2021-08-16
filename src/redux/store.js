@@ -1,6 +1,12 @@
 import{createStore} from 'redux';
-import reducers from "./reducers";
+import {combineReducers} from 'redux';
+import {productReducer, selectedProductReducer} from './reducers/productReducer';
 
+
+const reducers = combineReducers({
+    allProducts: productReducer,
+    product: selectedProductReducer,
+})
 
 const store = createStore(
     reducers, 

@@ -1,9 +1,9 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import s from "./Header.module.css";
-import netshopLogo from "../images/netshopLogo.png";
+import netshopLogo from "../../images/netshopLogo.png";
 
- const Header =(props) => {
+export default function Header(props) {
     return(
         <div className={s.body}>
             <div className={s.navbar}>
@@ -15,5 +15,3 @@ import netshopLogo from "../images/netshopLogo.png";
         </div>
     )
 }
-
-export default Header;
