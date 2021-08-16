@@ -1,18 +1,51 @@
-.navbar{
+.header{
     background-color: #2D2D2D;
     width: 100%;
-    height: 100px;;
+    height: 71px;
     margin: 0;
+    display: flex;
+    padding-top: 29px;
 }
-
+.nav{
+    font-family: Raleway;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-left: 2%;
+    color: #EEFFF6;
+    text-decoration: none;
+}
+.nav:first-of-type{
+    margin-left: 19.79%;
+}
+.nav:nth-of-type(2) span{
+    display: inline-block;
+    width: 75px;
+}
 .logo{
-    width: 12%;
-    height: auto;
-    left: 0.2%;
-    top: 28px;
+    width: 167px;
+    height: 41px;
+    position: relative;
+    margin-left: 17.8%;
 }
-.logo img{
-    width: 100%;
-    height: auto;
-    
+.user{
+    display: flex;
+    height: 47.5px;
+    margin-left: 3.95%;
+}
+.user a{
+    font-family: SF Pro Display;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    color: #EFFFF5;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.user img {
+    height: 47.5px;
+    width: 47.5px;
+    border-radius: 100%;
 }
