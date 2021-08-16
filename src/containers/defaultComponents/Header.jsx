@@ -8,7 +8,6 @@ export default function Header(props) {
         <div className={s.body}>
             <div className={s.navbar}>
             <div className={s.logo}><img src={netshopLogo}></img></div>
-                <h2>NETSHOP</h2>
                 { props.isAuth ? props.login
                 : <NavLink to={'/login'}>Login</NavLink> }
             </div>

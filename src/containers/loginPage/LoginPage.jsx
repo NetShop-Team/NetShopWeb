@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LoginForm from './LoginForm';
+import s from './LoginPage.module.css';
 
 function LoginLogout( ){
     const adminUser = {
@@ -22,7 +23,7 @@ function LoginLogout( ){
         console.log("Logout");
     }
     return(
-        <div>
+        <div >
            {(user.email !="") ? (
                <div>
                    <h2>Welcome, <span>{user.name}</span></h2>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-
+import s from './LoginPage.module.css';
 
 
 function LoginForm({Login, error}){
@@ -24,10 +24,33 @@ function LoginForm({Login, error}){
 
     return(
         <form onSubmit ={submitHandler}>
-            <div className ="form-inner">
-                <h2>Login</h2>
+            <div className ={s.body}>
+                <h2>Вход</h2>
+                <p className={s.wary}>Кто вы?</p>
+                
+                <div className={s.container}>
+                
+  <ul>
+  <li>
+    <input type="radio" id="f-option" name="selector" />
+    <label for="f-option">Покупатель</label>
+    
+    <div className={s.check}></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="s-option" name="selector"  />
+    <label for="s-option">Продавец</label>
+    
+    <div className={s.check}><div className={s.inside}></div></div>
+  </li>
+  
+</ul>
+</div>
+  
                 {/*ERROR!*/ }
-                <div className="form-group">
+                <div className={s.form}>
+                    
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" id="name" onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
                 </div>
