@@ -1,31 +1,24 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import s from './LoginPage.module.css';
-import {NavLink} from "react-router-dom";
+import s from './SignIn.module.css';
+import { NavLink } from 'react-router-dom';
 
-function LoginForm({Login, error}){
+function SignInForm({SignIn, error}){
     const [details, setDetails] = useState({name: "", email: "", password: ""});
     const submitHandler = e => {
         e.preventDefault();
 
-        Login(details);
+        SignIn(details);
     }
     
     const auth = () => {
-       // const getData = axios.get(`http://b69e18568654.ngrok.io/users/auth/${details.name}/${details.password}`)
-       const getData = axios.get(`http://b69e18568654.ngrok.io/users`)
-        if(getData == "no users"){
-            console.log("неправильный пароль или логин")
-        } else {
-           console.log(getData)
-        }
-        console.log(getData)
+       
     }
 
     return(
         <form onSubmit ={submitHandler}>
             <div className ={s.body}>
-                <h2>Вход</h2>
+                <h2>Регистрация</h2>
                 <p className={s.wary}>Кто вы?</p>
                 
                 <div className={s.container}>
@@ -61,12 +54,12 @@ function LoginForm({Login, error}){
                     <input type="password" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
                 </div>
                 
-                <input type="submit" onClick={auth} value="Войти" />
-                <div className={s.link}><NavLink to='/signin' >Не зарегистрированы? Сделайте это сейчас</NavLink></div>
+                <input type="submit" onClick={auth} value="Зарегистрироваться" />
+                <div className={s.link}><NavLink to='/login' >Уже зарегистрированы? Войдите здесь</NavLink></div>
                 </div>
             </div>
         </form>
     )
 }
 
-export default LoginForm;
+export default SignInForm;
