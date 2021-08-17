@@ -3,10 +3,11 @@ import {NavLink} from "react-router-dom";
 import s from "./Header.module.css";
 import netshopLogo from "../../images/netshopLogo.png";
 import ava from "../../images/ava.jpeg";
-
+import bck from "./background.png"
 export default function Header(props) {
     return(
         <div className={s.header}>
+                <img className={s.bck} src={bck} alt="background" />
                 <img className={s.logo} src={netshopLogo}></img>
                 <NavLink className={s.nav} to='/'>КАТЕГОРИИ</NavLink>
                 <NavLink className={s.nav} to='/'>

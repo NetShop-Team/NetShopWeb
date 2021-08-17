@@ -6,6 +6,12 @@
     display: flex;
     padding-top: 29px;
 }
+.bck{
+    position: absolute;
+    width: 100%;
+    margin-top: -29px;
+    z-index: 0;
+}
 .nav{
     font-family: Raleway;
     font-weight: 800;

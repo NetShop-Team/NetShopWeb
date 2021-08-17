@@ -3,7 +3,8 @@ import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ProductComponent from './ProductComponent';
 import { setProducts } from '../../redux/actions/productsActions';
-
+import bck from './background.png'
+import s from './productsPage.module.css'
 const ProductListing = () => {
 
     const products = useSelector((state) => state)
@@ -22,8 +23,9 @@ const ProductListing = () => {
     console.log("Products: ", products)
 
     return(
-    <div className="ui grid container">
-        <ProductComponent />
+    <div >
+        <img className={s.bck} src={bck} alt="background" />
+        <ProductComponent className={s.products} />
     </div>)
 
 }

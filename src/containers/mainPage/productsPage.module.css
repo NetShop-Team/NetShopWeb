@@ -1,0 +1,18 @@
+
+.products{
+    width: 58.81%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.products img {
+    width: 100%;
+}
+.bck{
+    position: absolute;
+    width: 100%;
+    margin-top: -29px;
+    z-index: 0;
+}
