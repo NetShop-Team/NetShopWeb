@@ -5,12 +5,13 @@
     margin: 0;
     display: flex;
     padding-top: 29px;
+    z-index: 5;
 }
 .bck{
     position: absolute;
     width: 100%;
     margin-top: -29px;
-    z-index: 0;
+    z-index: -1;
 }
 .nav{
     font-family: Raleway;
